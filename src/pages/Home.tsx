@@ -18,7 +18,7 @@ const Home: React.FunctionComponent<IHomePageProps> = (props) => {
   
       <Link to="/Profile">Go to Profile</Link>
       <button onClick={() => navigate('/layout/55')}>Go to layout</button>
-      <h1>Dashboard</h1>
+      <h1>WELCOME TO HOME PAGE</h1>
     </div>
   );
 };
