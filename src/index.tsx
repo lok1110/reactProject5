@@ -6,6 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { theme as proTheme } from '@chakra-ui/pro-theme'
 import { extendTheme, theme as baseTheme } from '@chakra-ui/react'
+import { Amplify, Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
 
 export const theme = extendTheme(
   {

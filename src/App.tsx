@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import LayoutComponent from './components/Layout';
+import Login from './pages/Login';
 
 export interface IApp {}
 
@@ -18,6 +19,7 @@ const App:React.FunctionComponent<IApp> = (props) =>{
            
                 <Route path ="/" element={<LayoutComponent/>}>
                     <Route index  element={<Dashboard/>}/>
+                    <Route path="/login"  element={<Login/>}/>
                     <Route path=":number" element={<Profile/>}/>
                 </Route>
             </Routes>
