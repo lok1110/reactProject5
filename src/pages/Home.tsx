@@ -10,7 +10,7 @@ interface ResendConfCodeParameters {
 
 
 
-const Dashboard: React.FunctionComponent<IHomePageProps> = (props) => {
+const Home: React.FunctionComponent<IHomePageProps> = (props) => {
   const navigate = useNavigate();
 
   return (
@@ -23,4 +23,4 @@ const Dashboard: React.FunctionComponent<IHomePageProps> = (props) => {
   );
 };
 
-export default Dashboard;
+export default Home;

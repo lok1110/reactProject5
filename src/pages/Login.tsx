@@ -9,6 +9,7 @@ Amplify.configure(awsconfig);
 
 export function Login({ signOut, user }: WithAuthenticatorProps) {
   return (
+  
     <>
       <h1>Hello {user?.username}</h1>
       <button onClick={signOut}>Sign out</button>

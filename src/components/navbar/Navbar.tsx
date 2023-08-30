@@ -10,6 +10,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Text,
 } from '@chakra-ui/react'
 import { FiBell, FiSearch } from 'react-icons/fi'
 import { DocumentPopover } from './DocumentPopover'
@@ -63,11 +64,14 @@ export const Navbar = () => {
                 colorScheme="gray"
                 spacing="8"
                 display={{ base: 'none', lg: 'flex' }}
-              >
-                <Button>Dashbaord</Button>
-                <Button>Analysis</Button>
-                <DocumentPopover />
-                <Button>History</Button>
+              > <Link to="/Home">
+                <Button>Home</Button>
+                </Link>
+                <Link to="/LMS">
+                <Button>LMS</Button>
+                </Link>
+                {/* <DocumentPopover />
+                <Button>History</Button> */}
             
               </ButtonGroup>
             </HStack>
@@ -79,17 +83,17 @@ export const Navbar = () => {
                 <Input placeholder="Search" variant="filled.accent" />
               </InputGroup>
               <ButtonGroup variant="tertiary.accent" spacing="1">
+    
+              
+              </ButtonGroup>
               {username ? (
                   <>
-                    <p> {username}.</p>
+                    <Text color='white'> {username}.</Text>
                     <Button onClick={handleSignOut}>Sign Out</Button>
                   </>
                 ) : (
-                  <Link to="/login">Sign In</Link>
+                  <Link to="/login"><Button>Sign In</Button></Link>
                 )}
-                <IconButton icon={<FiBell />} aria-label="Show notification" isRound />
-              </ButtonGroup>
-              <Avatar boxSize="10" src="<https://i.pravatar.cc/300>" />
 
 
             </HStack>
