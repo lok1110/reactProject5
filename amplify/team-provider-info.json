@@ -10,6 +10,7 @@
       "StackName": "amplify-reactproject5-dev-194018",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:310901816315:stack/amplify-reactproject5-dev-194018/372b6580-47f3-11ee-a4fa-0a6ca47bf8ca",
       "AmplifyAppId": "dnnnaikqqqf8s"
+<<<<<<< HEAD
     },
     "categories": {
       "auth": {
@@ -18,6 +19,8 @@
       "api": {
         "reactproject5": {}
       }
+=======
+>>>>>>> c6a295c31217ae3a1be6145f496d68f05b4fc49a
     }
   }
 }

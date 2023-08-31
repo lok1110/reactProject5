@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type AmplifyDependentResourcesAttributes = {
   "api": {
     "reactproject5": {
@@ -18,3 +19,6 @@ export type AmplifyDependentResourcesAttributes = {
     }
   }
 }
+=======
+export type AmplifyDependentResourcesAttributes = {}
+>>>>>>> c6a295c31217ae3a1be6145f496d68f05b4fc49a

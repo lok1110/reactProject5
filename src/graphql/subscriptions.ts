@@ -38,3 +38,45 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const onCreateEmployees = /* GraphQL */ `
+  subscription OnCreateEmployees(
+    $filter: ModelSubscriptionEmployeesFilterInput
+  ) {
+    onCreateEmployees(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateEmployees = /* GraphQL */ `
+  subscription OnUpdateEmployees(
+    $filter: ModelSubscriptionEmployeesFilterInput
+  ) {
+    onUpdateEmployees(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteEmployees = /* GraphQL */ `
+  subscription OnDeleteEmployees(
+    $filter: ModelSubscriptionEmployeesFilterInput
+  ) {
+    onDeleteEmployees(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
