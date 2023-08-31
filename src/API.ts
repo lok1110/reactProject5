@@ -75,6 +75,39 @@ export type DeleteTodoInput = {
   id: string,
 };
 
+export type CreateEmployeesInput = {
+  id?: string | null,
+  name: string,
+  description?: string | null,
+};
+
+export type ModelEmployeesConditionInput = {
+  name?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelEmployeesConditionInput | null > | null,
+  or?: Array< ModelEmployeesConditionInput | null > | null,
+  not?: ModelEmployeesConditionInput | null,
+};
+
+export type employees = {
+  __typename: "employees",
+  id: string,
+  name: string,
+  description?: string | null,
+  createdAt: string,
+  updatedAt: string,
+};
+
+export type UpdateEmployeesInput = {
+  id: string,
+  name?: string | null,
+  description?: string | null,
+};
+
+export type DeleteEmployeesInput = {
+  id: string,
+};
+
 export type ModelTodoFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -103,6 +136,21 @@ export type ModelIDInput = {
 export type ModelTodoConnection = {
   __typename: "ModelTodoConnection",
   items:  Array<Todo | null >,
+  nextToken?: string | null,
+};
+
+export type ModelEmployeesFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelEmployeesFilterInput | null > | null,
+  or?: Array< ModelEmployeesFilterInput | null > | null,
+  not?: ModelEmployeesFilterInput | null,
+};
+
+export type ModelEmployeesConnection = {
+  __typename: "ModelEmployeesConnection",
+  items:  Array<employees | null >,
   nextToken?: string | null,
 };
 
@@ -142,6 +190,14 @@ export type ModelSubscriptionStringInput = {
   beginsWith?: string | null,
   in?: Array< string | null > | null,
   notIn?: Array< string | null > | null,
+};
+
+export type ModelSubscriptionEmployeesFilterInput = {
+  id?: ModelSubscriptionIDInput | null,
+  name?: ModelSubscriptionStringInput | null,
+  description?: ModelSubscriptionStringInput | null,
+  and?: Array< ModelSubscriptionEmployeesFilterInput | null > | null,
+  or?: Array< ModelSubscriptionEmployeesFilterInput | null > | null,
 };
 
 export type CreateTodoMutationVariables = {
@@ -192,6 +248,54 @@ export type DeleteTodoMutation = {
   } | null,
 };
 
+export type CreateEmployeesMutationVariables = {
+  input: CreateEmployeesInput,
+  condition?: ModelEmployeesConditionInput | null,
+};
+
+export type CreateEmployeesMutation = {
+  createEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateEmployeesMutationVariables = {
+  input: UpdateEmployeesInput,
+  condition?: ModelEmployeesConditionInput | null,
+};
+
+export type UpdateEmployeesMutation = {
+  updateEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteEmployeesMutationVariables = {
+  input: DeleteEmployeesInput,
+  condition?: ModelEmployeesConditionInput | null,
+};
+
+export type DeleteEmployeesMutation = {
+  deleteEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
 export type GetTodoQueryVariables = {
   id: string,
 };
@@ -218,6 +322,42 @@ export type ListTodosQuery = {
     __typename: "ModelTodoConnection",
     items:  Array< {
       __typename: "Todo",
+      id: string,
+      name: string,
+      description?: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type GetEmployeesQueryVariables = {
+  id: string,
+};
+
+export type GetEmployeesQuery = {
+  getEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListEmployeesQueryVariables = {
+  filter?: ModelEmployeesFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListEmployeesQuery = {
+  listEmployees?:  {
+    __typename: "ModelEmployeesConnection",
+    items:  Array< {
+      __typename: "employees",
       id: string,
       name: string,
       description?: string | null,
@@ -265,6 +405,51 @@ export type OnDeleteTodoSubscriptionVariables = {
 export type OnDeleteTodoSubscription = {
   onDeleteTodo?:  {
     __typename: "Todo",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateEmployeesSubscriptionVariables = {
+  filter?: ModelSubscriptionEmployeesFilterInput | null,
+};
+
+export type OnCreateEmployeesSubscription = {
+  onCreateEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateEmployeesSubscriptionVariables = {
+  filter?: ModelSubscriptionEmployeesFilterInput | null,
+};
+
+export type OnUpdateEmployeesSubscription = {
+  onUpdateEmployees?:  {
+    __typename: "employees",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteEmployeesSubscriptionVariables = {
+  filter?: ModelSubscriptionEmployeesFilterInput | null,
+};
+
+export type OnDeleteEmployeesSubscription = {
+  onDeleteEmployees?:  {
+    __typename: "employees",
     id: string,
     name: string,
     description?: string | null,
