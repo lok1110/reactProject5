@@ -1,44 +1,22 @@
 {
-  "staging": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-amplify3f521002bb264-staging-15005-authRole",
-      "UnauthRoleArn": "arn:aws:iam::310901816315:role/amplify-amplify3f521002bb264-staging-15005-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::310901816315:role/amplify-amplify3f521002bb264-staging-15005-authRole",
-      "Region": "ap-southeast-1",
-      "DeploymentBucketName": "amplify-amplify3f521002bb264-staging-15005-deployment",
-      "UnauthRoleName": "amplify-amplify3f521002bb264-staging-15005-unauthRole",
-      "StackName": "amplify-amplify3f521002bb264-staging-15005",
-      "StackId": "arn:aws:cloudformation:ap-southeast-1:310901816315:stack/amplify-amplify3f521002bb264-staging-15005/b533bbb0-47a0-11ee-8c6f-0ad387425108",
-      "AmplifyAppId": "dpaln7at38g1"
-    },
-    "categories": {
-      "auth": {
-        "reactproject51fbe0257": {},
-        "reactproject5c3bb8c7e": {}
-      },
-      "api": {
-        "reactproject5": {}
-      }
-    }
-  },
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-reactproject5-dev-185651-authRole",
-      "UnauthRoleArn": "arn:aws:iam::310901816315:role/amplify-reactproject5-dev-185651-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::310901816315:role/amplify-reactproject5-dev-185651-authRole",
+      "AuthRoleName": "amplify-reactproject5-dev-194018-authRole",
+      "UnauthRoleArn": "arn:aws:iam::310901816315:role/amplify-reactproject5-dev-194018-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::310901816315:role/amplify-reactproject5-dev-194018-authRole",
       "Region": "ap-southeast-1",
-      "DeploymentBucketName": "amplify-reactproject5-dev-185651-deployment",
-      "UnauthRoleName": "amplify-reactproject5-dev-185651-unauthRole",
-      "StackName": "amplify-reactproject5-dev-185651",
-      "StackId": "arn:aws:cloudformation:ap-southeast-1:310901816315:stack/amplify-reactproject5-dev-185651/f34f1de0-4723-11ee-b0e6-02accb91574a",
-      "AmplifyAppId": "dpaln7at38g1"
+      "DeploymentBucketName": "amplify-reactproject5-dev-194018-deployment",
+      "UnauthRoleName": "amplify-reactproject5-dev-194018-unauthRole",
+      "StackName": "amplify-reactproject5-dev-194018",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:310901816315:stack/amplify-reactproject5-dev-194018/372b6580-47f3-11ee-a4fa-0a6ca47bf8ca",
+      "AmplifyAppId": "dnnnaikqqqf8s"
     },
     "categories": {
+      "auth": {
+        "reactproject575fa7b56": {}
+      },
       "api": {
         "reactproject5": {}
-      },
-      "auth": {
-        "reactproject5739faef0": {}
       }
     }
   }
